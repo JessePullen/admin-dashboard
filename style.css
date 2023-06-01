@@ -14,11 +14,11 @@ li {
 
 .container {
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 350px auto;
 }
 
 .header {
-
+    height: 250px;
 }
 
 .sidebar {
@@ -29,41 +29,48 @@ li {
 }
 
 .content {
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    margin-top: -50px;
     display: grid;
-    grid-template-columns: auto 300px;
+    grid-template-columns: auto 500px;
+    grid-auto-rows: min-content;
 }
 
 
 .header h1 {
     margin: 0;
-    height: 75px;
+    /* height: 75px; */
 }
 
 .projects {
     grid-row: span 2;
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 800px));
+    grid-auto-rows: min-content;
 }
 
 .announcements {
-    margin: 10px 10px 10px 0px;
+    margin: 10px;
+    margin-right: 50px;
     padding: 10px;
+    height: 500px;
 }
 
 .trending {
     grid-column-start: 2;
-    margin: 10px 10px 25px 0px;
+    margin: 10px;
+    margin-right: 50px;
     padding: 10px;
+    height: 500px;
 }
 
 .card {
     background-color: white;
-    width: 250px;
-    height: 150px;
-    padding: 10px;
-    margin: 10px;
+    width: 700px;
+    height: 300px;
+    padding-left: 50px;
+    padding-top: 15px;
+    margin: 20px;
 }
 
 /* Colours for space indicators */
