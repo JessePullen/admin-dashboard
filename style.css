@@ -3,9 +3,18 @@ body {
     margin: 0;
 }
 
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 18px;
+    padding: 5px;
+}
+
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 300px auto;
 }
 
 .header {
@@ -13,34 +22,51 @@ body {
 }
 
 .sidebar {
+    min-height: 100vh;
     grid-row: span 2;
+    display: grid;
+    grid-template-rows: min-content min-content auto;
 }
 
 .content {
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: auto 300px;
 }
 
 
 .header h1 {
     margin: 0;
+    height: 75px;
 }
 
 .projects {
     grid-row: span 2;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+}
+
+.announcements {
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
 }
 
 .trending {
     grid-column-start: 2;
+    margin: 10px 10px 25px 0px;
+    padding: 10px;
 }
 
-
+.card {
+    background-color: white;
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+}
 
 /* Colours for space indicators */
-.projects {
-    background-color: yellow;
-}
-
 .announcements {
     background-color: rebeccapurple;
 }
