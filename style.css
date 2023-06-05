@@ -30,7 +30,7 @@ li {
 
 .content {
     /* min-height: 100vh; */
-    margin-top: -50px;
+    /* margin-top: -50px; */
     display: grid;
     grid-template-columns: auto 500px;
     grid-auto-rows: min-content;
@@ -43,6 +43,8 @@ li {
 }
 
 .projects {
+    grid-column-start: 1;
+    grid-row-start: 1;
     grid-row: span 2;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min-content, 800px));
@@ -50,6 +52,8 @@ li {
 }
 
 .announcements {
+    grid-column-start: 2;
+    grid-row-start: 1;
     margin: 10px;
     margin-right: 50px;
     padding: 10px;
@@ -58,6 +62,7 @@ li {
 
 .trending {
     grid-column-start: 2;
+    grid-row-start: 2;
     margin: 10px;
     margin-right: 50px;
     padding: 10px;
@@ -73,12 +78,18 @@ li {
     margin: 20px;
 }
 
+.title {
+    font-size: 20px;
+    font-weight: 900;
+    /* height: 10px; */
+}
+
 /* Colours for space indicators */
-.announcements {
+.announcements-card {
     background-color: rebeccapurple;
 }
 
-.trending {
+.trending-card {
     background-color: red;
 }
 
