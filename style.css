@@ -3,6 +3,11 @@ body {
     margin: 0;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 350px auto;
+}
+
 ul {
     list-style: none;
 }
@@ -12,15 +17,94 @@ li {
     padding: 5px;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 350px auto;
+/* Assets Styling */
+button {
+    background-color: deepskyblue;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    width: 100px;
 }
 
+/* To be replaced with image file once assets are added */
+.user-img {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    grid-row: span 2;
+}
+
+.top-header .user-img {
+    height: 50px;
+    width: 50px;
+}
+
+.search-bar {
+    background-color: lightgrey;
+    width: 750px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+/* Header Section */
 .header {
-    height: 250px;
+    height: 200px;
+    display: grid;
+    margin-left: 50px;
+    margin-top: 15px;
 }
 
+.top-header {
+    display: grid;
+    grid-template-columns: 1000px auto;
+    height: 25px;
+}
+
+.top-header h3 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    width: 100px;
+    justify-self: end;
+    margin-right: 100px;
+}
+
+.top-header .user-img {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    justify-self: end;
+    margin-right: 250px;
+}
+
+.bottom-header {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: auto auto;
+}
+
+.user-main {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 50px 50px auto;
+}
+
+.bottom-header h1,
+.bottom-header p {
+    grid-column-start: 3;
+}
+
+.buttons {
+    align-self: center;
+    justify-self: end;
+    margin-right: 50px;
+}
+
+.buttons button {
+    margin-left: 25px;
+}
+
+/* Sidebar Section */
 .sidebar {
     min-height: 100vh;
     grid-row: span 2;
@@ -28,23 +112,21 @@ li {
     grid-template-rows: min-content min-content auto;
 }
 
+
+/* Main Section */
 .content {
-    /* min-height: 100vh; */
-    /* margin-top: -50px; */
     display: grid;
     grid-template-columns: auto 500px;
     grid-auto-rows: min-content;
+    margin-top: -25px;
 }
 
 .header h1 {
     margin: 0;
-    /* height: 75px; */
 }
 
 .projects {
     grid-column-start: 1;
-    /* grid-row-start: ; */
-    /* grid-row: span 2; */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min-content, 800px));
     grid-auto-rows: min-content;
@@ -87,6 +169,7 @@ li {
     padding-left: 25px;
 }
 
+
 /* Colours for space indicators */
 .announcements-card {
     background-color: rebeccapurple;
@@ -105,5 +188,5 @@ li {
 }
 
 .header {
-    background-color: grey;
+    /* background-color: grey; */
 }
